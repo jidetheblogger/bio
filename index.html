@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jide The Blogger | Links</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9; 
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #cbd5e1; 
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #94a3b8; 
+        }
+
+        /* Animation utilities */
+        .fade-in-up {
+            animation: fadeInUp 0.5s ease-out forwards;
+            opacity: 0;
+            transform: translateY(20px);
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800">
+
+    <div class="flex flex-col md:flex-row min-h-screen">
+
+        <!-- LEFT SECTION: Profile & Socials (Sticky Sidebar on Desktop) -->
+        <aside class="w-full md:w-[400px] bg-slate-900 text-white md:h-screen md:fixed top-0 left-0 flex flex-col justify-center items-center p-8 relative overflow-hidden z-10 shrink-0">
+            
+            <!-- Decorative Background Elements -->
+            <div class="absolute top-0 left-0 w-full h-full opacity-10 pointer-events-none">
+                <div class="absolute top-10 left-10 w-32 h-32 bg-blue-500 rounded-full blur-3xl"></div>
+                <div class="absolute bottom-10 right-10 w-40 h-40 bg-purple-500 rounded-full blur-3xl"></div>
+            </div>
+
+            <!-- Profile Content -->
+            <div class="relative z-10 text-center w-full max-w-xs">
+                <!-- Profile Picture Placeholder -->
+                <div class="relative mx-auto mb-6 group">
+                    <div class="w-32 h-32 rounded-full bg-gradient-to-br from-blue-400 to-purple-600 p-1 shadow-xl mx-auto">
+                        <img 
+                            src="https://api.dicebear.com/9.x/avataaars/svg?seed=Jide&backgroundColor=c0aede" 
+                            alt="Jide The Blogger" 
+                            class="w-full h-full object-cover rounded-full bg-slate-800"
+                        >
+                    </div>
+                    <div class="absolute bottom-0 right-0 right-1/3 bg-green-500 w-4 h-4 rounded-full border-2 border-slate-900"></div>
+                </div>
+
+                <h1 class="text-3xl font-extrabold tracking-tight mb-2 bg-clip-text text-transparent bg-gradient-to-r from-blue-200 to-purple-200">
+                    Jide The Blogger
+                </h1>
+                <p class="text-slate-400 mb-6 text-sm font-medium uppercase tracking-widest">Content Creator & Digital Strategist</p>
+                
+                <p class="text-slate-300 text-sm leading-relaxed mb-8">
+                    Exploring the intersection of tech, lifestyle, and storytelling. Helping brands find their voice in a noisy digital world.
+                </p>
+
+                <!-- Social Icons -->
+                <div class="flex justify-center gap-4 mb-8">
+                    <a href="#" class="p-2 bg-slate-800 rounded-full hover:bg-blue-600 transition-colors duration-300 hover:-translate-y-1">
+                        <i data-lucide="twitter" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="p-2 bg-slate-800 rounded-full hover:bg-pink-600 transition-colors duration-300 hover:-translate-y-1">
+                        <i data-lucide="instagram" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="p-2 bg-slate-800 rounded-full hover:bg-blue-700 transition-colors duration-300 hover:-translate-y-1">
+                        <i data-lucide="linkedin" class="w-5 h-5"></i>
+                    </a>
+                    <a href="#" class="p-2 bg-slate-800 rounded-full hover:bg-red-600 transition-colors duration-300 hover:-translate-y-1">
+                        <i data-lucide="youtube" class="w-5 h-5"></i>
+                    </a>
+                </div>
+
+                <button onclick="copyUrl()" class="text-xs flex items-center justify-center gap-2 text-slate-500 hover:text-white transition-colors mx-auto">
+                    <i data-lucide="link" class="w-3 h-3"></i> jidetheblogger.com
+                </button>
+            </div>
+        </aside>
+
+        <!-- RIGHT SECTION: Links List -->
+        <main class="flex-1 w-full md:ml-[400px] bg-slate-50 min-h-screen p-6 md:p-12 lg:p-20">
+            
+            <div class="max-w-2xl mx-auto">
+                <h2 class="text-xl font-bold text-slate-800 mb-8 flex items-center gap-2">
+                    <i data-lucide="compass" class="w-5 h-5 text-blue-600"></i>
+                    Explore My World
+                </h2>
+
+                <!-- Links Container -->
+                <div class="space-y-4">
+
+                    <!-- Link Item 1: Main Blog -->
+                    <a href="#" class="group fade-in-up flex items-center p-4 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <i data-lucide="newspaper" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-slate-800 text-lg">Official Blog</h3>
+                            <p class="text-sm text-slate-500">Read my latest thoughts, tutorials, and stories.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-blue-600 transition-colors">
+                            <i data-lucide="chevron-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Link Item 2: Portfolio -->
+                    <a href="#" class="group fade-in-up delay-100 flex items-center p-4 bg-white border border-slate-200 rounded-xl hover:border-purple-300 hover:shadow-lg hover:shadow-purple-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+                            <i data-lucide="briefcase" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-slate-800 text-lg">Portfolio</h3>
+                            <p class="text-sm text-slate-500">Case studies and past projects.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-purple-600 transition-colors">
+                            <i data-lucide="chevron-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Link Item 3: Newsletter -->
+                    <a href="#" class="group fade-in-up delay-200 flex items-center p-4 bg-white border border-slate-200 rounded-xl hover:border-yellow-300 hover:shadow-lg hover:shadow-yellow-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-yellow-100 text-yellow-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-yellow-500 group-hover:text-white transition-colors">
+                            <i data-lucide="mail" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-slate-800 text-lg">Weekly Newsletter</h3>
+                            <p class="text-sm text-slate-500">Join 10k+ subscribers getting weekly tips.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-yellow-600 transition-colors">
+                            <i data-lucide="chevron-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Link Item 4: YouTube -->
+                    <a href="#" class="group fade-in-up delay-300 flex items-center p-4 bg-white border border-slate-200 rounded-xl hover:border-red-300 hover:shadow-lg hover:shadow-red-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-red-600 group-hover:text-white transition-colors">
+                            <i data-lucide="video" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-slate-800 text-lg">YouTube Channel</h3>
+                            <p class="text-sm text-slate-500">Vlogs, tech reviews, and tutorials.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-red-600 transition-colors">
+                            <i data-lucide="chevron-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Featured/Promo Block -->
+                    <div class="fade-in-up delay-300 my-6 p-1 rounded-xl bg-gradient-to-r from-pink-500 via-red-500 to-yellow-500">
+                        <div class="bg-white rounded-lg p-4 text-center">
+                            <span class="text-xs font-bold text-pink-600 uppercase tracking-wider mb-1 block">New Release</span>
+                            <h3 class="font-bold text-slate-900 text-xl mb-2">The Ultimate Blogging Guide E-Book</h3>
+                            <p class="text-sm text-slate-600 mb-4">Learn how I grew my audience from 0 to 50k in one year.</p>
+                            <button class="w-full py-2 px-4 bg-slate-900 text-white font-bold rounded-lg hover:bg-slate-700 transition-colors">
+                                Get it for $19
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Link Item 5: Gear Recommendations -->
+                    <a href="#" class="group fade-in-up flex items-center p-4 bg-white border border-slate-200 rounded-xl hover:border-slate-400 hover:shadow-lg transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-slate-100 text-slate-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-slate-800 group-hover:text-white transition-colors">
+                            <i data-lucide="camera" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-slate-800 text-lg">My Gear</h3>
+                            <p class="text-sm text-slate-500">Cameras, Laptops, and Desk Setup.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-slate-800 transition-colors">
+                            <i data-lucide="chevron-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Link Item 6: Podcast -->
+                    <a href="#" class="group fade-in-up flex items-center p-4 bg-white border border-slate-200 rounded-xl hover:border-indigo-300 hover:shadow-lg hover:shadow-indigo-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+                            <i data-lucide="headphones" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-slate-800 text-lg">The JideCast</h3>
+                            <p class="text-sm text-slate-500">Listen on Spotify & Apple Podcasts.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-indigo-600 transition-colors">
+                            <i data-lucide="chevron-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- Link Item 7: Consultations -->
+                    <a href="#" class="group fade-in-up flex items-center p-4 bg-white border border-slate-200 rounded-xl hover:border-emerald-300 hover:shadow-lg hover:shadow-emerald-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-emerald-100 text-emerald-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+                            <i data-lucide="calendar" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-slate-800 text-lg">Book a Consultation</h3>
+                            <p class="text-sm text-slate-500">1-on-1 Strategy calls.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-emerald-600 transition-colors">
+                            <i data-lucide="chevron-right"></i>
+                        </div>
+                    </a>
+
+                     <!-- Link Item 8: Community -->
+                     <a href="#" class="group fade-in-up flex items-center p-4 bg-white border border-slate-200 rounded-xl hover:border-blue-300 hover:shadow-lg hover:shadow-blue-500/10 transition-all duration-300 transform hover:-translate-y-1">
+                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+                            <i data-lucide="message-circle" class="w-6 h-6"></i>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="font-bold text-slate-800 text-lg">Discord Community</h3>
+                            <p class="text-sm text-slate-500">Chat with other creators.</p>
+                        </div>
+                        <div class="text-slate-300 group-hover:text-blue-600 transition-colors">
+                            <i data-lucide="chevron-right"></i>
+                        </div>
+                    </a>
+
+                    <!-- NEW CONTACT FORM SECTION -->
+                    <div id="contact-section" class="bg-white border border-slate-200 rounded-xl p-6 shadow-sm fade-in-up delay-300 mt-8">
+                        <h3 class="font-bold text-slate-800 text-lg mb-2 flex items-center gap-2">
+                            <i data-lucide="mail" class="w-5 h-5 text-blue-600"></i>
+                            Send me a message
+                        </h3>
+                        <p class="text-sm text-slate-500 mb-6">Got a question or proposal? Fill out the form below.</p>
+                        
+                        <!-- 
+                             IMPORTANT: Replace 'YOUR_FORM_ID' in the action URL below with your actual Formspree Form ID.
+                             Example: action="https://formspree.io/f/xvndogry"
+                        -->
+                        <form id="contactForm" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="space-y-4">
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Name</label>
+                                    <input type="text" name="name" placeholder="Your Name" required class="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 focus:bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm">
+                                </div>
+                                <div>
+                                    <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Email</label>
+                                    <input type="email" name="email" placeholder="Your Email" required class="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 focus:bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm">
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-500 uppercase mb-1">Message</label>
+                                <textarea name="message" rows="4" placeholder="Write your message here..." required class="w-full px-4 py-2 rounded-lg bg-slate-50 border border-slate-200 focus:bg-white focus:ring-2 focus:ring-blue-500 focus:border-blue-500 outline-none transition-all text-sm resize-none"></textarea>
+                            </div>
+                            
+                            <button type="submit" id="submitBtn" class="w-full py-3 px-6 bg-slate-900 hover:bg-blue-600 text-white font-bold rounded-lg transition-all duration-300 flex items-center justify-center gap-2 shadow-lg hover:shadow-blue-500/30 hover:-translate-y-0.5">
+                                <span>Send Message</span>
+                                <i data-lucide="send" class="w-4 h-4"></i>
+                            </button>
+                        </form>
+                    </div>
+
+                </div>
+
+                <!-- Footer -->
+                <footer class="mt-12 text-center text-slate-400 text-sm">
+                    <p>&copy; 2025 Jide The Blogger. All rights reserved.</p>
+                </footer>
+            </div>
+        </main>
+
+        <!-- Custom Toast Notification -->
+        <div id="toast" class="fixed bottom-4 left-1/2 transform -translate-x-1/2 bg-slate-800 text-white px-6 py-3 rounded-full shadow-xl transition-all duration-300 opacity-0 translate-y-10 pointer-events-none z-50 flex items-center gap-2">
+            <i data-lucide="check-circle" class="w-4 h-4 text-green-400"></i>
+            <span id="toastMsg">Action successful!</span>
+        </div>
+
+    </div>
+
+    <script>
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Copy URL Function
+        function copyUrl() {
+            const dummy = document.createElement('input');
+            const text = "jidetheblogger.com"; 
+            document.body.appendChild(dummy);
+            dummy.value = text;
+            dummy.select();
+            document.execCommand('copy');
+            document.body.removeChild(dummy);
+
+            showToast("URL Copied to clipboard!");
+        }
+
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            const toastMsg = document.getElementById('toastMsg');
+            toastMsg.innerText = message;
+            
+            toast.classList.remove('opacity-0', 'translate-y-10');
+            toast.classList.add('opacity-100', 'translate-y-0');
+            
+            setTimeout(() => {
+                toast.classList.remove('opacity-100', 'translate-y-0');
+                toast.classList.add('opacity-0', 'translate-y-10');
+            }, 3000);
+        }
+
+        // Contact Form Handler
+        const form = document.getElementById("contactForm");
+        
+        async function handleSubmit(event) {
+            event.preventDefault();
+            const status = document.getElementById("toast");
+            const btn = document.getElementById("submitBtn");
+            const originalBtnText = btn.innerHTML;
+            const data = new FormData(event.target);
+
+            // CHECK IF USER HAS CONFIGURED FORMSPREE
+            // If the action still contains "YOUR_FORM_ID", we simulate a success
+            // so the template looks functional without breaking.
+            if (form.action.includes("YOUR_FORM_ID")) {
+                btn.innerHTML = '<div class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div> Sending...';
+                btn.disabled = true;
+                
+                setTimeout(() => {
+                    btn.innerHTML = originalBtnText;
+                    btn.disabled = false;
+                    form.reset();
+                    showToast("Demo Success! (Setup Formspree ID to receive emails)");
+                }, 1500);
+                return;
+            }
+
+            // REAL SUBMISSION (If ID is configured)
+            btn.innerHTML = '<div class="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin"></div> Sending...';
+            btn.disabled = true;
+
+            fetch(event.target.action, {
+                method: form.method,
+                body: data,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    showToast("Thanks for your message!");
+                    form.reset();
+                } else {
+                    response.json().then(data => {
+                        if (Object.hasOwn(data, 'errors')) {
+                            showToast(data["errors"].map(error => error["message"]).join(", "));
+                        } else {
+                            showToast("Oops! There was a problem sending your form");
+                        }
+                    })
+                }
+            }).catch(error => {
+                showToast("Oops! There was a problem sending your form");
+            }).finally(() => {
+                btn.innerHTML = originalBtnText;
+                btn.disabled = false;
+            });
+        }
+
+        form.addEventListener("submit", handleSubmit);
+    </script>
+</body>
+</html>
